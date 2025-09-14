@@ -1,0 +1,410 @@
+/* ========== Global ========== */
+:root {
+  --accent: #e60012; /* warna merah khas Mitsubishi */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+/* ========== Card & Shadow ========== */
+.card-shadow {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Navbar ========== */
+header a {
+  transition: color 0.25s ease;
+}
+header a:hover {
+  color: var(--accent);
+}
+
+/* ========== Button Accent ========== */
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  transition: all 0.25s ease;
+}
+.btn-accent:hover {
+  opacity: 0.9;
+}
+
+/* ========== Section Styling ========== */
+section {
+  padding: 80px 0;
+}
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #111827;
+  position: relative;
+}
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+/* ====== Model Section ====== */
+.models-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.model-card {
+  min-width: 320px;
+  flex: 0 0 auto;
+  transition: transform 0.4s ease;
+}
+.model-card:hover { transform: translateY(-6px); }
+
+.model-card .img-wrap {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.model-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Tombol Navigasi */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+.slider-btn:hover { background: #f3f3f3; }
+.slider-btn.left-0 { left: -15px; }
+.slider-btn.right-0 { right: -15px; }
+
+
+
+
+
+/* PROMO SECTION */
+.promo-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.promo-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+  position: relative;
+  display: inline-block;
+}
+
+.promo-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e60012;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.promo-section .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.promo-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.promo-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.promo-content {
+  flex: 1.2;
+  min-width: 320px;
+}
+
+.promo-content .terms {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.btn-sales {
+  display: inline-block;
+  background: #e60012;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-sales:hover {
+  background: #b8000e;
+}
+
+
+/* ===== FORM TEST DRIVE ===== */
+.test-drive-form {
+  max-width: 800px; /* biar section tengahnya tidak terlalu melebar */
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.test-drive-form .section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.test-drive-form .form-desc {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-card {
+  max-width: 500px;   /* ✅ perkecil lagi biar tidak terlalu lebar */
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent, #e60012);
+  box-shadow: 0 0 0 2px rgba(230, 0, 18, 0.2);
+}
+
+.form-action {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn-submit {
+  background: var(--accent, #e60012);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #c7000f;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ======== MOBILE RESPONSIVE ======== */
+@media (max-width: 768px) {
+
+  /* Section Padding */
+  section {
+    padding: 40px 15px; /* lebih rapat */
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2::after {
+    width: 40px;
+    height: 2px;
+    margin-top: 0.5rem;
+  }
+
+  /* Navbar */
+  header .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  header a {
+    font-size: 0.875rem;
+  }
+
+  /* HERO SECTION */
+  #hero .grid {
+    gap: 1rem;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 0.875rem;
+  }
+
+  #hero .btn-accent,
+  #hero .inline-flex {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  #hero .card-shadow img {
+    height: 200px;
+  }
+
+  #hero .card-shadow h3 {
+    font-size: 1rem;
+  }
+
+  #hero .card-shadow p {
+    font-size: 0.875rem;
+  }
+
+  #hero .card-shadow a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* MODELS SLIDER */
+  .model-card {
+    min-width: 240px;
+  }
+  .model-card .img-wrap {
+    height: 150px;
+  }
+
+  /* PROMO SECTION */
+  .promo-section .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .promo-image, .promo-content {
+    min-width: 100%;
+  }
+  .promo-title {
+    font-size: 1.8rem;
+  }
+
+  /* TEST DRIVE FORM */
+  .test-drive-form {
+    padding: 2rem 1rem;
+  }
+  .form-card {
+    padding: 1.5rem;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  .btn-submit {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 15px;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Animasi slide mobile menu */
+.mobile-menu-transition {
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile-menu-transition.open {
+  max-height: 500px; /* cukup tinggi untuk menampung semua link */
+  opacity: 1;
+  padding-top: 1rem; /* sesuai design */
+  padding-bottom: 1.5rem;
+}

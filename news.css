@@ -1,0 +1,220 @@
+:root {
+  --accent: #e60012; /* warna merah khas Mitsubishi */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+/* ========== SECTION ARTIKEL ========== */
+.news-article {
+  margin-top: 120px; /* offset navbar */
+  margin-bottom: 60px;
+}
+
+.news-article .tanggal {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.news-article .judul-artikel {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #111;
+  text-align: center;
+}
+
+.artikel-image {
+  text-align: center;
+  margin: 25px 0 35px;
+}
+.artikel-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.artikel-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.artikel-content p {
+  margin-bottom: 1.2em;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.artikel-content h2.subjudul {
+  margin: 1.8em 0 0.8em;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.artikel-content h3 {
+  margin-top: 1.4em;
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Tombol navigasi bawah artikel */
+.news-buttons {
+  margin-top: 40px;
+  text-align: center;
+}
+.news-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.news-buttons .back {
+  background: #6b7280;
+  color: #fff;
+}
+.news-buttons .back:hover {
+  background: #4b5563;
+}
+.news-buttons .test-drive {
+  background: var(--accent);
+  color: #fff;
+}
+.news-buttons .test-drive:hover {
+  background: #b0000e;
+}
+
+/* ===== TABLE SIMULASI ===== */
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0 40px;
+}
+
+.simulasi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.simulasi-table th,
+.simulasi-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.simulasi-table th {
+  background: #e60012;
+  color: #fff;
+  font-weight: 600;
+}
+
+.simulasi-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+
+
+
+
+/* ========== Footer ========== */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ======= MOBILE RESPONSIVE ======= */
+@media (max-width: 768px) {
+
+  /* ===== News Article ===== */
+  .news-article {
+    margin-top: 80px; /* lebih rapat ke navbar */
+    margin-bottom: 40px;
+  }
+
+  .news-article .judul-artikel {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .artikel-image {
+    margin: 15px 0 20px;
+  }
+  .artikel-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .artikel-content {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  .artikel-content p {
+    font-size: 14px;
+    margin-bottom: 1em;
+  }
+
+  .artikel-content h2.subjudul {
+    font-size: 18px;
+    margin: 1.5em 0 0.6em;
+  }
+  .artikel-content h3 {
+    font-size: 16px;
+    margin-top: 1em;
+  }
+
+  /* Tombol navigasi */
+  .news-buttons {
+    margin-top: 25px;
+  }
+  .news-buttons .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    margin: 6px;
+  }
+
+  /* Table simulasi */
+  .table-container {
+    margin: 15px 0 30px;
+  }
+  .simulasi-table th,
+  .simulasi-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 15px;
+    font-size: 0.8rem;
+  }
+  footer a {
+    font-size: 0.85rem;
+  }
+}

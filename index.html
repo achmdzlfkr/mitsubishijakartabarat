@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitsubishi Jakarta Barat</title>
+  <link rel="icon" type="image/png" href="assets/3berlian.png" />
+  <meta name="description" content="Dealer Mitsubishi — sales resmi, promo, unit tersedia, test drive dan kontak cepat." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed font-[Inter]">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/3berlian.png" alt="Mitsubishi" class="h-11 w-11 object-contain rounded-md" />
+          <div>
+            <div class="text-sm font-semibold">Mitsubishi Jakarta Barat</div>
+            <div class="text-xs text-gray-500 -mt-1">Sales Executive Salindo Berlian Motor</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="index.html" class="block">Beranda</a>
+          <a href="#models" class="block">Mobil</a>
+          <a href="#promo" class="block">Promo</a>
+          <a href="#berita" class="block">Berita</a>
+          <a href="#test-drive" class="block">Test Drive</a>
+          <a href="#contact" class="text-white bg-[color:var(--accent)] px-4 py-2 rounded-md shadow hover:opacity-95">Hubungi</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="btnMenu" aria-label="Open menu" class="p-2 rounded-md hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="index.html" class="block">Beranda</a>
+        <a href="#models" class="block">Mobil</a>
+        <a href="#promo" class="block">Promo</a>
+        <a href="#berita" class="block">Berita</a>
+        <a href="#test-drive" class="block">Test Drive</a>
+        <a href="#contact" class="block text-white bg-[color:var(--accent)] px-4 py-2 rounded-md inline-block">Hubungi</a>
+      </div>
+    </div>
+    <script>
+      const btnMenu = document.getElementById("btnMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      btnMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </header>
+
+  <main class="pt-10">
+    <!-- HERO -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-5">
+
+          <div class="space-y-6">
+            <div class="text-sm inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-[color:var(--accent)] font-semibold">Dealer Resmi • Test Drive</div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold">Temukan Mitsubishi yang Tepat untuk Anda</h1>
+            <p class="text-gray-600 max-w-xl">Pilihan lengkap: passenger, commercial, LCV — harga kompetitif, promo menarik, dan layanan after-sales terpercaya.</p>
+
+            <div class="flex gap-3 items-center">
+              <a href="#models" class="inline-flex items-center gap-2 bg-[color:var(--accent)] text-white px-5 py-3 rounded-md shadow hover:opacity-95">Lihat Unit Tersedia</a>
+              <a href="#test-drive" class="inline-flex items-center gap-2 border border-gray-200 px-5 py-3 rounded-md">Jadwalkan Test Drive</a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="card-shadow rounded-2xl overflow-hidden bg-white">
+              <img src="assets/destinator-home.jpg" alt="Mitsubishi vehicle" class="w-full h-64 sm:h-80 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold">Promo Spesial</h3>
+                <p class="text-gray-600 mt-2">Tukar tambah, tenor ringan, serta cashback khusus untuk pembelian bulan ini.</p>
+                <div class="mt-4 flex gap-3">
+                  <a href="#promo" class="text-[color:var(--accent)] font-semibold">Lihat Detail</a>
+                  <a href="#contact" class="ml-auto inline-flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-md">Booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MODEL -->
+    <section id="models" class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-12">Model Terbaru</h2>
+
+        <div class="relative">
+        <!-- Tombol Prev -->
+        <button id="prevBtn" class="slider-btn left-0">&#10094;</button>
+
+        <!-- Slider -->
+        <div id="modelsSlider" class="models-slider">
+            <!-- Card 1 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/destinator-blue.webp" alt="Destinator" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">Destinator Ultimate Premium</h3>
+                <p class="text-gray-500">Mulai Rp 465 Juta</p>
+            </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/xforce-white-pearl.png" alt="Xforce" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">Xforce Ultimate CVT</h3>
+                <p class="text-gray-500">Mulai Rp 440 Juta</p>
+            </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/triton-graphite-grey.webp" alt="Triton" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">All-New Triton</h3>
+                <p class="text-gray-500">Mulai Rp 550 Juta</p>
+            </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/destinator-blue.webp" alt="Destinator" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">Destinator Ultimate Premium</h3>
+                <p class="text-gray-500">Mulai Rp 465 Juta</p>
+            </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/triton-graphite-grey.webp" alt="Triton" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">All-New Triton</h3>
+                <p class="text-gray-500">Mulai Rp 550 Juta</p>
+            </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
+            <div class="img-wrap">
+                <img src="assets/xforce-white-pearl.png" alt="Xforce" />
+            </div>
+            <div class="p-5 text-center">
+                <h3 class="font-semibold text-xl">Xforce Ultimate CVT</h3>
+                <p class="text-gray-500">Mulai Rp 440 Juta</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Tombol Next -->
+        <button id="nextBtn" class="slider-btn right-0">&#10095;</button>
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- PROMO -->
+    <section id="promo" class="promo-section">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+        <h2 class="promo-title">Promo Spesial Mitsubishi</h2>
+    </div>
+
+    <div class="container">
+        <!-- Poster -->
+        <div class="promo-image">
+        <img src="assets/promo.webp" alt="Promo Mitsubishi">
+        </div>
+
+        <!-- Syarat & Ketentuan -->
+        <div class="promo-content">
+        <ul class="terms">
+            <li>Promo berlaku hingga akhir bulan ini atau selama persediaan unit tersedia.</li>
+            <li>DP ringan mulai 10% tergantung varian & lokasi.</li>
+            <li>Bunga ringan 0% hingga 2 tahun untuk tenor tertentu.</li>
+            <li>Gratis perawatan berkala hingga 4 tahun / 50.000 km.</li>
+            <li>Gratis asuransi tahun pertama sesuai varian & syarat dealer.</li>
+            <li>Trade-in mobil lama berlaku di beberapa cabang.</li>
+            <li>Bonus tambahan: kaca film & paket SMART Silver (perawatan & oli resmi).</li>
+            <li>Promo tidak dapat digabung dengan promo lain.</li>
+            <li>Pembiayaan melalui leasing rekanan resmi.</li>
+            <li>Konsumen wajib melengkapi dokumen (KTP, NPWP, slip gaji, dll).</li>
+        </ul>
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-sales">
+            Hubungi Sales
+        </a>
+        </div>
+    </div>
+    </section>
+
+
+
+
+    <!-- BERITA -->
+    <section id="berita" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Berita</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+            <img src="assets/berita1.jpg" alt="Berita Mitsubishi" class="w-full h-48 object-cover">
+            <div class="p-5 flex flex-col flex-1">
+            <span class="text-sm text-gray-500">11 September 2025</span>
+            <h3 class="font-semibold text-xl mt-2 mb-3">Berkendara Saat Roadtrip Lebih Percaya Diri dengan Fitur Keselamatan Mitsubishi Destinator</h3>
+            <p class="text-gray-600 mb-4 flex-1">
+                PT Mitsubishi Motors Krama Yudha Sales Indonesia resmi meluncurkan model terbaru dengan fitur canggih dan desain modern...
+            </p>
+            <a href="news1.html" class="text-red-600 font-medium hover:underline mt-auto">Baca Selengkapnya →</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+            <img src="assets/berita2.jpg" alt="Berita Dealer" class="w-full h-48 object-cover">
+            <div class="p-5 flex flex-col flex-1">
+            <span class="text-sm text-gray-500">11 September 2025</span>
+            <h3 class="font-semibold text-xl mt-2 mb-3">6 Alasan Mengapa Banyak Keluarga Upgrade ke Mobil SUV</h3>
+            <p class="text-gray-600 mb-4 flex-1">
+                Sudah bertahun-tahun lamanya, jenis mobil Multi Purpose Vehicle (MPV) menjadi pilihan utama keluarga karena memiliki jumlah seater yang lebih banyak dan kabin nyaman. 
+            </p>
+            <a href="news2.html" class="text-red-600 font-medium hover:underline mt-auto">Baca Selengkapnya →</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+            <img src="assets/berita3.jpg" alt="Berita Pameran" class="w-full h-48 object-cover">
+            <div class="p-5 flex flex-col flex-1">
+            <span class="text-sm text-gray-500">11 September 2025</span>
+            <h3 class="font-semibold text-xl mt-2 mb-3">Lihat Simulasi Kredit & Cicilan Mobil Mitsubishi Destinator</h3>
+            <p class="text-gray-600 mb-4 flex-1">
+                PT Mitsubishi Motors Krama Yudha Sales Indonesia (MMKSI) kembali menggebrak pasar otomotif dengan meluncurkan Premium Family SUV 7-seater bernama Destinator.
+            </p>
+            <a href="news3.html" class="text-red-600 font-medium hover:underline mt-auto">Baca Selengkapnya →</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== SECTION FORM TEST DRIVE ========== -->
+    <section class="test-drive-form container" id="test-drive">
+      <h2 class="section-title">Form Test Drive</h2>
+      <p class="form-desc">Isi formulir di bawah ini untuk mendaftar test drive Mitsubishi.</p>
+      
+      <form action="#" method="post" class="form-card card-shadow">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="telepon">No. Telepon</label>
+          <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="emailanda@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="mobil">Pilih Mobil</label>
+          <select id="mobil" name="mobil" required>
+            <option value="">-- Pilih Tipe Mobil --</option>
+            <option value="destinator-gls">Mitsubishi Destinator GLS</option>
+            <option value="destinator-exceed">Mitsubishi Destinator Exceed</option>
+            <option value="destinator-ultimate">Mitsubishi Destinator Ultimate</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tanggal">Tanggal Test Drive</label>
+          <input type="date" id="tanggal" name="tanggal" required>
+        </div>
+        <div class="form-action">
+          <button type="button" class="btn-submit" onclick="sendToWhatsApp()">Kirim Permintaan</button>
+        </div>
+      </form>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-center">Hubungi Kami</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <!-- Profile Sales -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow text-center md:col-span-1">
+            <img src="assets/sales.jpg" alt="Sales Mitsubishi" class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-blue-500">
+            <h3 class="text-xl font-semibold flex items-center justify-center gap-2">
+              Achmad Zulfikar 
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414L9 13.414l4.707-4.707z" clip-rule="evenodd"/>
+              </svg>
+            </h3>
+            <p class="text-gray-600"><strong>Sales Executive</strong><br>
+            Mitsubishi Salindo Berlian Motor</p>
+            <p class="mt-4">📞 0812-3456-7890</p>
+            <p>📧 sales@mitsubishi.co.id</p>
+            <a href="https://wa.me/6281234567890" target="_blank" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-md shadow hover:opacity-95">Chat via WhatsApp</a>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="md:col-span-2">
+            <div class="h-96 w-full rounded-lg shadow overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8214423112045!2d106.73973287498984!3d-6.154663793832461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7291b73baa5%3A0x14b1f85e122abc24!2sPT.%20Salindo%20Berlian%20Motor!5e0!3m2!1sid!2sid!4v1757832180245!5m2!1sid!2sid"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>Template by
+      <a href="https://aizen.com" target="_blank" class="text-red-500 hover:underline">
+        Aizen
+      </a>
+      &copy; 2025 Mitsubishi Jakarta Barat
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
