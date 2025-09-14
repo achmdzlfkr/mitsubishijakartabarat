@@ -1,30 +1,35 @@
-const btnMenu = document.getElementById("btnMenu");
-const mobileMenu = document.getElementById("mobileMenu");
+      const btnMenu = document.getElementById("btnMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-btnMenu.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
+      btnMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
 
 
 /* SLIDE MODEL */
 const slider = document.getElementById("modelsSlider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
-const cards = slider.querySelectorAll(".model-card");
 
-let currentIndex = 0;
-
-function goToSlide(index) {
-  currentIndex = Math.max(0, Math.min(index, cards.length - 1));
-  slider.scrollTo({
-    left: cards[currentIndex].offsetLeft - slider.offsetLeft,
-    behavior: "smooth"
-  });
+function getCardWidth() {
+  const card = slider.querySelector(".model-card");
+  const gap = parseInt(window.getComputedStyle(slider).gap) || 0;
+  return card.offsetWidth + gap;
 }
 
-prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
-nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
-
+prevBtn.addEventListener("click", () => {
+  slider.scrollBy({ left: -getCardWidth(), behavior: "smooth" });
+});
+nextBtn.addEventListener("click", () => {
+  slider.scrollBy({ left: getCardWidth(), behavior: "smooth" });
+});
 
 /* LINK TEST DRIVE */
 function sendToWhatsApp() {
@@ -59,6 +64,3 @@ function sendToWhatsApp() {
   // Redirect ke WhatsApp
   window.open(url, "_blank");
 }
-
-
-/* MOBILE TOGGLE MENU */

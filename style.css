@@ -61,22 +61,31 @@ section h2::after {
 }
 
 /* ====== Model Section ====== */
+.models-slider-wrapper {
+  position: relative;
+}
+
 .models-slider {
   display: flex;
   gap: 20px;
-  overflow-x: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+.models-slider::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .model-card {
-  min-width: 320px;
   flex: 0 0 auto;
-  transition: transform 0.4s ease;
+  min-width: 240px;
+  transition: transform 0.3s ease;
 }
-.model-card:hover { transform: translateY(-6px); }
-
+.model-card:hover {
+  transform: translateY(-6px);
+}
 .model-card .img-wrap {
-  width: 100%;
   height: 200px;
   display: flex;
   align-items: center;
@@ -88,7 +97,7 @@ section h2::after {
   object-fit: contain;
 }
 
-/* Tombol Navigasi */
+/* Tombol slider */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -96,16 +105,23 @@ section h2::after {
   background: rgba(255,255,255,0.9);
   border: none;
   font-size: 2rem;
-  padding: 8px 14px;
+  padding: 8px 12px;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
   z-index: 10;
 }
+.slider-btn.left-0 { left: -10px; }
+.slider-btn.right-0 { right: -10px; }
 .slider-btn:hover { background: #f3f3f3; }
-.slider-btn.left-0 { left: -15px; }
-.slider-btn.right-0 { right: -15px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .model-card { min-width: 180px; }
+  .model-card .img-wrap { height: 150px; }
+  .slider-btn { font-size: 1.5rem; padding: 6px 10px; }
+}
+
 
 
 
@@ -374,10 +390,11 @@ footer a:hover {
   .form-card {
     padding: 1.5rem;
   }
-  .form-group input,
-  .form-group select {
-    padding: 0.5rem 0.7rem;
-    font-size: 0.85rem;
+  .test-drive-form .form-group input,
+  .test-drive-form .form-group select {
+    padding: 0.9rem 0.9rem;
+    font-size: 0.95rem;
+    height: 44px;
   }
   .btn-submit {
     padding: 0.6rem 1.5rem;

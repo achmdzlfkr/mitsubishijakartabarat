@@ -58,21 +58,6 @@
         <a href="#contact" class="block text-white bg-[color:var(--accent)] px-4 py-2 rounded-md inline-block">Hubungi</a>
       </div>
     </div>
-    <script>
-      const btnMenu = document.getElementById("btnMenu");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      btnMenu.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      const mobileLinks = mobileMenu.querySelectorAll("a");
-      mobileLinks.forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-    </script>
   </header>
 
   <main class="pt-10">
@@ -111,89 +96,57 @@
       </div>
     </section>
 
-    <!-- MODEL -->
+
+    <!-- MODELS -->
     <section id="models" class="py-20 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold mb-12">Model Terbaru</h2>
 
-        <div class="relative">
-        <!-- Tombol Prev -->
-        <button id="prevBtn" class="slider-btn left-0">&#10094;</button>
-
-        <!-- Slider -->
-        <div id="modelsSlider" class="models-slider">
+        <div class="relative models-slider-wrapper">
+          <!-- Slider -->
+          <div id="modelsSlider" class="models-slider">
             <!-- Card 1 -->
             <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
+              <div class="img-wrap">
                 <img src="assets/destinator-blue.webp" alt="Destinator" />
-            </div>
-            <div class="p-5 text-center">
+              </div>
+              <div class="p-5 text-center">
                 <h3 class="font-semibold text-xl">Destinator Ultimate Premium</h3>
                 <p class="text-gray-500">Mulai Rp 465 Juta</p>
-            </div>
+              </div>
             </div>
 
             <!-- Card 2 -->
             <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
+              <div class="img-wrap">
                 <img src="assets/xforce-white-pearl.png" alt="Xforce" />
-            </div>
-            <div class="p-5 text-center">
+              </div>
+              <div class="p-5 text-center">
                 <h3 class="font-semibold text-xl">Xforce Ultimate CVT</h3>
                 <p class="text-gray-500">Mulai Rp 440 Juta</p>
-            </div>
+              </div>
             </div>
 
             <!-- Card 3 -->
             <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
+              <div class="img-wrap">
                 <img src="assets/triton-graphite-grey.webp" alt="Triton" />
-            </div>
-            <div class="p-5 text-center">
+              </div>
+              <div class="p-5 text-center">
                 <h3 class="font-semibold text-xl">All-New Triton</h3>
                 <p class="text-gray-500">Mulai Rp 550 Juta</p>
+              </div>
             </div>
-            </div>
+            <!-- Tambahkan kartu lain sesuai kebutuhan -->
+          </div>
 
-            <!-- Card 1 -->
-            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
-                <img src="assets/destinator-blue.webp" alt="Destinator" />
-            </div>
-            <div class="p-5 text-center">
-                <h3 class="font-semibold text-xl">Destinator Ultimate Premium</h3>
-                <p class="text-gray-500">Mulai Rp 465 Juta</p>
-            </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
-                <img src="assets/triton-graphite-grey.webp" alt="Triton" />
-            </div>
-            <div class="p-5 text-center">
-                <h3 class="font-semibold text-xl">All-New Triton</h3>
-                <p class="text-gray-500">Mulai Rp 550 Juta</p>
-            </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="card-shadow rounded-xl overflow-hidden bg-white model-card">
-            <div class="img-wrap">
-                <img src="assets/xforce-white-pearl.png" alt="Xforce" />
-            </div>
-            <div class="p-5 text-center">
-                <h3 class="font-semibold text-xl">Xforce Ultimate CVT</h3>
-                <p class="text-gray-500">Mulai Rp 440 Juta</p>
-            </div>
-            </div>
+          <!-- Tombol Prev/Next -->
+          <button id="prevBtn" class="slider-btn left-0">&#10094;</button>
+          <button id="nextBtn" class="slider-btn right-0">&#10095;</button>
         </div>
-
-        <!-- Tombol Next -->
-        <button id="nextBtn" class="slider-btn right-0">&#10095;</button>
-        </div>
-    </div>
+      </div>
     </section>
+
 
 
 
